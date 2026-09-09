@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 3,
+  "policyId": "GITHUB_ONLY_OPERATION_LOCK",
+  "status": "ACTIVE_HARD_LOCK",
+  "effectiveAt": "2026-09-09",
+  "project": "Useful Tech & Home Gear — Web, SEO & Amazon",
+  "scope": {
+    "allProjectChats": true,
+    "allWorkExecutions": true,
+    "allAgentsAndAutomations": true
+  },
+  "repository": {
+    "provider": "GITHUB",
+    "fullName": "usefultechhomegear/usefultechhomegear.github.io",
+    "repositoryId": 1340720092,
+    "defaultBranch": "main",
+    "canonicalUrl": "https://github.com/usefultechhomegear/usefultechhomegear.github.io"
+  },
+  "connectorResolution": {
+    "mode": "DIRECT_FULL_NAME",
+    "requiredRepositorySelector": "usefultechhomegear/usefultechhomegear.github.io",
+    "genericSearchIsExistenceCheck": false,
+    "zeroSearchResultsMeansRepositoryMissing": false,
+    "onDirectAccessFailure": "FAIL_CLOSED_AND_REPORT_CONNECTOR_AUTH_OR_PERMISSION_BLOCKER"
+  },
+  "rules": {
+    "githubIsOnlyCanonicalPersistentStore": true,
+    "githubIsOnlyProjectManagementStore": true,
+    "allChatsMustReadRootAgentsFile": true,
+    "googleDriveReadsAllowed": false,
+    "googleDriveWritesAllowed": false,
+    "googleDriveSearchAllowed": false,
+    "googleDriveFallbackAllowed": false,
+    "googleDriveAuditAllowed": false,
+    "googleDriveRecoveryAllowed": false,
+    "liveExternalFactsMustPersistToGithubWhenMaterial": true,
+    "chatMayBeSoleSourceOfTruth": false
+  },
+  "forbiddenFallbacks": [
+    "GOOGLE_DRIVE",
+    "CHAT_MEMORY_AS_AUTHORITY",
+    "ALTERNATE_REPOSITORY"
+  ]
+}

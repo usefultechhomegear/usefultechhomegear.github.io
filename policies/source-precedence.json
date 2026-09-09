@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 3,
+  "policyId": "SOURCE_PRECEDENCE",
+  "status": "ACTIVE",
+  "project": "Useful Tech & Home Gear — Web, SEO & Amazon",
+  "canonicalRepository": "usefultechhomegear/usefultechhomegear.github.io",
+  "canonicalRepositoryId": 1340720092,
+  "canonicalBranch": "main",
+  "precedence": [
+    "CURRENT_EXPLICIT_USER_INSTRUCTION",
+    "VERSIONED_GITHUB_POLICIES_AND_STATE",
+    "LIVE_SITE_BLOGGER_FACTS",
+    "LIVE_GOOGLE_SEARCH_CONSOLE_FACTS",
+    "LIVE_AMAZON_ASSOCIATES_FACTS",
+    "LIVE_PINTEREST_FACTS",
+    "GITHUB_HISTORY",
+    "CHAT_CONTEXT_NON_CANONICAL"
+  ],
+  "rules": {
+    "githubIsOnlyCanonicalPersistentMemory": true,
+    "githubIsOnlyManagementPlane": true,
+    "resolveGithubByExactFullName": true,
+    "driveMayBeRead": false,
+    "driveMayBeWritten": false,
+    "driveMayBeSearched": false,
+    "driveMayBeFallback": false,
+    "driveMayBeUsedForAuditOrRecovery": false,
+    "materialLiveCorrectionsPersistToGithub": true
+  }
+}
