@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "project": "Useful Tech & Home Gear — Web, SEO & Amazon",
-  "status": "GITHUB_ONLY_CANONICAL_ESTABLISHED",
-  "effectiveAt": "2026-09-09",
+  "status": "GITHUB_ONLY_CANONICAL_WITH_PINTEREST_EXECUTION_BRIDGE",
+  "effectiveAt": "2026-09-11",
   "canonicalRepository": {
     "fullName": "usefultechhomegear/usefultechhomegear.github.io",
     "repositoryId": 1340720092,
@@ -24,5 +24,17 @@
     "driveFallback": false,
     "driveAuditOrRecovery": false
   },
-  "nextAction": "NORMALIZE_CURRENT_ARTICLE_CATALOG_AND_METRICS_DIRECTLY_IN_GITHUB"
+  "integrations": {
+    "pinterestPublicationBridge": {
+      "status": "ACTIVE",
+      "operationalRepository": "usefultechhomegear/pinterest-amazon-car-safety-tech",
+      "policyPath": "policies/pinterest-publication-bridge.json",
+      "runbookPath": "docs/pinterest-publication-runbook.md",
+      "manualGenerateCommand": "generate-pending-products",
+      "manualPublishCommand": "approve-publish-monitor",
+      "autonomousTaskMayWaitForApproval": false,
+      "referenceSuccessfulExecutionDate": "2026-09-09"
+    }
+  },
+  "nextAction": "USE_PINTEREST_EXECUTION_BRIDGE_FOR_NEXT_PRODUCT_PRODUCTION_OR_PUBLICATION_REQUEST"
 }
