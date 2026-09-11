@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "policyId": "PINTEREST_PUBLICATION_BRIDGE",
+  "status": "ACTIVE",
+  "effectiveAt": "2026-09-11",
+  "project": "Useful Tech & Home Gear — Web, SEO & Amazon",
+  "canonicalProjectRepository": "usefultechhomegear/usefultechhomegear.github.io",
+  "operationalRepository": {
+    "fullName": "usefultechhomegear/pinterest-amazon-car-safety-tech",
+    "role": "PINTEREST_EXECUTION_ONLY",
+    "isCanonicalProjectStore": false,
+    "isFallbackStore": false,
+    "allowedPaths": [
+      ".github/pinterest/control/command.json",
+      ".github/pinterest/creative/batches/**",
+      ".github/pinterest/publications/**",
+      ".github/pinterest/monitoring/**",
+      ".github/pinterest/runtime-state/**",
+      ".github/pinterest/runtime/**",
+      ".github/workflows/pinterest-orchestrator.yml"
+    ]
+  },
+  "operatorContract": {
+    "manualGeneratePhrase": "Genere los productos pendientes",
+    "manualGenerateCommand": "generate-pending-products",
+    "manualApprovalPhrase": "Aprobados",
+    "manualPublishCommand": "approve-publish-monitor",
+    "expectedPublicationOutput": "Publicación Finalizada",
+    "expectedMonitoringOutput": "Monitoreo completado"
+  },
+  "manualMode": {
+    "publicationBeforeApproval": false,
+    "requiresExactApprovalPhrase": "Aprobados"
+  },
+  "autonomousTaskMode": {
+    "mayWaitForHumanApproval": false,
+    "requiredSequence": [
+      "GENERATE",
+      "COMMERCIAL_GATES",
+      "DEDUPLICATION",
+      "BOARD_MATCH",
+      "CREATIVE_GENERATION",
+      "PUBLICATION",
+      "PERSIST_PIN_IDS_URLS",
+      "BASELINE_MONITORING"
+    ]
+  },
+  "referenceExecution": {
+    "date": "2026-09-09",
+    "batchId": "DAILY-PRODUCTION-20260909-1406-ART",
+    "selectedProductCount": 10,
+    "generatedPinCount": 13,
+    "boardsInvestigated": 12,
+    "candidatesFound": 30,
+    "historicalDuplicatesRejected": 714,
+    "publicationRequestId": "APPROVE-PUBLISH-20260909-184723Z",
+    "publicationControlCommit": "cfedc8597ec26a990843a5052063085abe21e779",
+    "publicationExecutionCommit": "7317de2e6509510cf385e24d847da0ac52259afe"
+  },
+  "referenceProductionDefaults": {
+    "targetProducts": 10,
+    "researchAllActiveBoards": true,
+    "expectedBoardCount": 12,
+    "balancedSourceSchedule": true,
+    "sourceConcurrency": 6,
+    "transientRetryCount": 1,
+    "applyCommercialHardGates": true,
+    "deduplicateAgainstFullPortfolioHistory": true,
+    "enforceSemanticBoardProductMatch": true,
+    "enforceLaunchBalance": true,
+    "automotiveMinimum": 4,
+    "homeTechMinimum": 4,
+    "wildcardByCommercialScore": 2,
+    "maxProductsPerBoard": 2,
+    "enforceTwoDayBoardRotation": true,
+    "creativeGenerator": "CHATGPT_ONLY"
+  },
+  "publicationVerification": {
+    "requirePublishedCountEqualsApprovedPinCount": true,
+    "requirePinterestPinIds": true,
+    "requirePinterestUrls": true,
+    "requireBoardAssignmentVerification": true,
+    "requireBaselineMetricsCapture": true,
+    "requireDurableGithubState": true
+  },
+  "storageRules": {
+    "sourceOfTruth": "GITHUB",
+    "googleDriveAllowed": false,
+    "huaweiObsAllowedAsPersistentStore": false,
+    "chatMemoryAllowedAsAuthority": false
+  }
+}
