@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "policyId": "GITHUB_ONLY_OPERATION_LOCK",
   "status": "ACTIVE_HARD_LOCK",
-  "effectiveAt": "2026-09-09",
+  "effectiveAt": "2026-09-11",
   "project": "Useful Tech & Home Gear — Web, SEO & Amazon",
   "scope": {
     "allProjectChats": true,
@@ -23,6 +23,17 @@
     "zeroSearchResultsMeansRepositoryMissing": false,
     "onDirectAccessFailure": "FAIL_CLOSED_AND_REPORT_CONNECTOR_AUTH_OR_PERMISSION_BLOCKER"
   },
+  "authorizedOperationalDependencies": [
+    {
+      "provider": "GITHUB",
+      "fullName": "usefultechhomegear/pinterest-amazon-car-safety-tech",
+      "purpose": "PINTEREST_PRODUCTION_PUBLICATION_MONITORING_EXECUTION_ONLY",
+      "policy": "policies/pinterest-publication-bridge.json",
+      "mayActAsCanonicalProjectStore": false,
+      "mayActAsFallbackStore": false,
+      "mayReceiveExecutionControlCommands": true
+    }
+  ],
   "rules": {
     "githubIsOnlyCanonicalPersistentStore": true,
     "githubIsOnlyProjectManagementStore": true,
@@ -34,11 +45,14 @@
     "googleDriveAuditAllowed": false,
     "googleDriveRecoveryAllowed": false,
     "liveExternalFactsMustPersistToGithubWhenMaterial": true,
-    "chatMayBeSoleSourceOfTruth": false
+    "chatMayBeSoleSourceOfTruth": false,
+    "alternateRepositoryFallbackAllowed": false,
+    "crossRepositoryOperationalExecutionAllowedOnlyWhenExplicitlyListed": true,
+    "authorizedOperationalDependencyIsNotFallback": true
   },
   "forbiddenFallbacks": [
     "GOOGLE_DRIVE",
     "CHAT_MEMORY_AS_AUTHORITY",
-    "ALTERNATE_REPOSITORY"
+    "UNAUTHORIZED_ALTERNATE_REPOSITORY"
   ]
 }
