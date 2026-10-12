@@ -16,7 +16,7 @@ Updated Blogger custom ads.txt to:
 ```
 google.com, pub-0736772467317366, DIRECT, f08c47fec0942fa0
 ```
-Saved successfully in Blogger settings. Browser request for published /ads.txt was blocked by client; public endpoint verification pending.
+Saved successfully in Blogger settings. Browser request for published /ads.txt was blocked by client. Independent public HTTP verification succeeded: exact retained-publisher line returned by https://www.usefultechhomegear.com/ads.txt.
 
 Added to Blogger theme head:
 ```xml
